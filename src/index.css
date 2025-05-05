@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        @apply antialiased;
+    }
+
+    body {
+        @apply bg-primary-50 text-primary-900 font-sans leading-relaxed;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        @apply font-title tracking-snug;
+    }
+
+    /* Hero text styling */
+    .hero-title {
+        @apply font-display font-bold tracking-tight;
+    }
+
+    /* Section titles */
+    .section-title {
+        @apply font-title font-bold tracking-medium;
+    }
+
+    /* Body text */
+    .body-text {
+        @apply font-sans tracking-wide;
+    }
+}
+
+/* Custom utility classes */
+@layer components {
+    .container-custom {
+        @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    }
+
+    .text-balance {
+        text-wrap: balance;
+    }
+}

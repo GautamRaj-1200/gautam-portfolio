@@ -1,0 +1,83 @@
+{
+  "personal": {
+    "name": "Gautam Raj",
+    "role": "Full Stack Developer",
+    "description": "I build exceptional and accessible digital experiences for the web.",
+    "avatar": "/avatar.jpg",
+    "location": "New Delhi, India",
+    "email": "gautamrajv2@gmail.com",
+    "socials": [
+      {
+        "platform": "GitHub",
+        "url": "https://github.com/GautamRaj-1200"
+      },
+      {
+        "platform": "LinkedIn",
+        "url": "https://linkedin.com/in/grajdev12"
+      }
+    ]
+  },
+  "about": {
+    "title": "About Me",
+    "description": "With a passion for both technology and design, I develop scalable, high-performance applications that captivate users and drive success.",
+    "resume": "/resume.pdf"
+  },
+  "projects": [
+    {
+      "title": "Project One",
+      "description": "A brief description of your project. This project demonstrates how to build a simple web application using React and TypeScript.",
+      "tags": ["React", "TypeScript", "TailwindCSS"],
+      "image": "https://placehold.co/600x400?text=Project+One",
+      "url": "https://project1.com",
+      "github": "https://github.com/username/project1"
+    }
+  ],
+  "skills": [
+    { "name": "React" },
+    { "name": "Node.js" },
+    { "name": "Python" },
+    { "name": "Java" },
+    { "name": "JavaScript" },
+    { "name": "HTML" },
+    { "name": "CSS" },
+    { "name": "Git" },
+    { "name": "Figma" },
+    { "name": "Sketch" },
+    { "name": "Adobe XD" }
+  ],
+  "experience": [
+    {
+      "company": "Health Pulse Connect",
+      "role": "Frontend Developer Intern",
+      "startDate": "May 2024",
+      "endDate": "June 2024",
+      "responsibilities": [
+        "Developed and maintained a health sector startup, implementing real-time chat and video call features with WebSockets.",
+        "Used Redux for state management and API integration, improving application performance.",
+        "Enhanced the web app's UI for a better user experience."
+      ]
+    },
+    {
+      "company": "Tech Innovations Inc.",
+      "role": "Software Engineer Intern",
+      "startDate": "June 2023",
+      "endDate": "August 2023",
+      "responsibilities": [
+        "Collaborated with the backend team to integrate APIs into the frontend using React.",
+        "Improved the scalability of the product by optimizing React component rendering.",
+        "Implemented automated unit tests using Jest to ensure the robustness of the application."
+      ]
+    },
+    {
+      "company": "Creative Solutions Ltd.",
+      "role": "UI/UX Designer Intern",
+      "startDate": "January 2023",
+      "endDate": "April 2023",
+      "responsibilities": [
+        "Designed user-friendly interfaces for mobile and web applications using Figma.",
+        "Collaborated with the development team to ensure smooth handoff and implementation of designs.",
+        "Conducted user research and usability testing to improve the overall user experience."
+      ]
+    }
+  ]
+}
