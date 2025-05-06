@@ -4,6 +4,7 @@ export interface Social {
 }
 
 export interface Skill {
+  icon: string | undefined;
   name: string;
 }
 

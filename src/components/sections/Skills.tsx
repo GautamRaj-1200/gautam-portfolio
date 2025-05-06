@@ -76,7 +76,10 @@ const Skills: React.FC = () => {
                            hover:shadow-md hover:border-primary-400 transition-all duration-300 
                            hover:bg-white/80"
               >
-                <div className="text-center">
+                <div className="flex justify-center items-center">
+                  <div className="w-8 h-8">
+                    <img src={skill.icon} alt="" className="w-full h-full" />
+                  </div>
                   <h3
                     className="text-base md:text-lg text-primary-800 group-hover:text-primary-900
                              transition-colors duration-300 px-2"

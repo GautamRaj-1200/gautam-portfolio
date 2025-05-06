@@ -2,7 +2,7 @@
   "personal": {
     "name": "Gautam Raj",
     "role": "Full Stack Developer",
-    "description": "I build exceptional and accessible digital experiences for the web.",
+    "description": "I like building cool stuff, exploring new tech, and contributing wherever I can — whether it's freelance gigs or open-source projects. ",
     "avatar": "/avatar.jpg",
     "location": "New Delhi, India",
     "email": "gautamrajv2@gmail.com",
@@ -19,31 +19,41 @@
   },
   "about": {
     "title": "About Me",
-    "description": "With a passion for both technology and design, I develop scalable, high-performance applications that captivate users and drive success.",
-    "resume": "/resume.pdf"
+    "description": "Hi, I'm Gautam — I enjoy building things in front of a screen. I've worked on several personal and freelance projects, and I'm always eager to learn and grow. I'm open to collaborations, freelance opportunities, and full-time or part-time roles.",
+    "resume": "/Gautam_Resume.pdf"
   },
   "projects": [
     {
-      "title": "Project One",
-      "description": "A brief description of your project. This project demonstrates how to build a simple web application using React and TypeScript.",
-      "tags": ["React", "TypeScript", "TailwindCSS"],
-      "image": "https://placehold.co/600x400?text=Project+One",
-      "url": "https://project1.com",
-      "github": "https://github.com/username/project1"
+      "title": "Legal Blogs",
+      "description": "A full-stack web application for blogging using the MERN(MongoDB, ExpressJs, ReactJs,Typescript, NodeJs) stack.",
+      "tags": ["React", "TypeScript", "Nodejs", "MongoDB"],
+      "image": "legal-blogs.png",
+      "url": "https://legal-blogs-stage.vercel.app/",
+      "github": "https://github.com/GautamRaj-1200/legal-blogs-latest"
+    },
+    {
+      "title": "AI Notes Generator",
+      "description": "A Generative AI Notes App made using Google Gemini API. Upload PDF file and generate notes from it.",
+      "tags": ["NextJs", "TypeScript", "Nodejs", "PostgreSQL", "Prisma"],
+      "image": "notes-gen.png",
+      "url": "https://notes-generator.vercel.app/",
+      "github": "https://github.com/GautamRaj-1200/notes-gen-latest"
     }
   ],
   "skills": [
-    { "name": "React" },
-    { "name": "Node.js" },
-    { "name": "Python" },
-    { "name": "Java" },
-    { "name": "JavaScript" },
-    { "name": "HTML" },
-    { "name": "CSS" },
-    { "name": "Git" },
-    { "name": "Figma" },
-    { "name": "Sketch" },
-    { "name": "Adobe XD" }
+    { "name": "JavaScript", "icon": "js-icon.png" },
+    { "name": "React", "icon": "react-js-icon.png" },
+    { "name": "NextJs", "icon": "nextjs-icon.png" },
+    { "name": "Node.js", "icon": "node-js-icon.png" },
+    { "name": "Java", "icon": "java-icon.png" },
+    { "name": "HTML", "icon": "html-icon.png" },
+    { "name": "CSS", "icon": "css-icon.png" },
+    { "name": "Tailwind CSS", "icon": "tailwind-css-icon.png" },
+    { "name": "Git", "icon": "git-icon.png" },
+    { "name": "AWS", "icon": "aws-icon.png" },
+    { "name": "Docker", "icon": "docker-icon.png" },
+    { "name": "PostgreSql", "icon": "postgresql-icon.png" },
+    { "name": "MongoDB", "icon": "mongodb-icon.png" }
   ],
   "experience": [
     {

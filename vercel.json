@@ -1,5 +1,8 @@
 {
   "rewrites": [
-    { "source": "/(.*)", "destination": "/" }
+    {
+      "source": "/github/:path*",
+      "destination": "https://cactro-git-stats-production.up.railway.app/github/:path*"
+    }
   ]
 }
