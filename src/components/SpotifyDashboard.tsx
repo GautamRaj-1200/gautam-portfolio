@@ -1,12 +1,17 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-const SpotifyDashboard = () => {
-  const [spotifyData, setSpotifyData] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+interface SpotifyError {
+  message?: string;
+  login_url?: string;
+  [key: string]: unknown;
+}
 
-  // Update this to your deployed backend URL
+const SpotifyDashboard = () => {
+  const [spotifyData, setSpotifyData] = useState<unknown>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<SpotifyError | null>(null);
+
   const BACKEND_URL = "https://spotify-portfolio-production.up.railway.app";
 
   useEffect(() => {
@@ -15,8 +20,18 @@ const SpotifyDashboard = () => {
         const response = await axios.get(`${BACKEND_URL}/spotify`);
         setSpotifyData(response.data);
         setLoading(false);
-      } catch (err) {
-        setError(err.response?.data || err.message);
+      } catch (err: unknown) {
+        let parsedError: SpotifyError = { message: "Unknown error" };
+
+        if (axios.isAxiosError(err)) {
+          if (typeof err.response?.data === "object") {
+            parsedError = err.response.data;
+          } else {
+            parsedError = { message: err.message };
+          }
+        }
+
+        setError(parsedError);
         setLoading(false);
       }
     };
@@ -25,7 +40,7 @@ const SpotifyDashboard = () => {
   }, []);
 
   if (loading) {
-    return <div>Loading Spotify data...</div>;
+    return <pre>Loading Spotify data...</pre>;
   }
 
   if (error) {
@@ -34,21 +49,16 @@ const SpotifyDashboard = () => {
         <h2>Error</h2>
         <pre>{JSON.stringify(error, null, 2)}</pre>
         {error.login_url && (
-          <div>
-            <a href={`${BACKEND_URL}${error.login_url}`}>Login to Spotify</a>
-          </div>
+          <a href={`${BACKEND_URL}${error.login_url}`}>Login to Spotify</a>
         )}
       </div>
     );
   }
 
   return (
-    <div>
-      <h2>Spotify Data</h2>
-      <pre style={{ textAlign: "left", overflowX: "auto" }}>
-        {JSON.stringify(spotifyData, null, 2)}
-      </pre>
-    </div>
+    <pre style={{ textAlign: "left", overflowX: "auto" }}>
+      {JSON.stringify(spotifyData, null, 2)}
+    </pre>
   );
 };
 

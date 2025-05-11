@@ -17,16 +17,29 @@ function App() {
   }, [personal]);
 
   return (
-    <>
-      {/* <Layout>
-        <Hero />
-        <Projects />
-        <Skills />
-      </Layout> */}
-      <Routes>
-        <Route path="/spotify" element={<SpotifyDashboard />} />
-      </Routes>
-    </>
+    <Routes>
+      {/* Home Route */}
+      <Route
+        path="/"
+        element={
+          <Layout>
+            <Hero />
+            <Projects />
+            <Skills />
+            {/* <Experience /> */}
+          </Layout>
+        }
+      />
+
+      {/* Spotify Route */}
+      <Route
+        path="/spotify"
+        element={
+          // No layout wrapper here since you want raw JSON
+          <SpotifyDashboard />
+        }
+      />
+    </Routes>
   );
 }
 
