@@ -6,6 +6,8 @@ import Projects from "./components/sections/Projects.tsx";
 import Skills from "./components/sections/Skills.tsx";
 // import Experience from "./components/sections/Experience.tsx";
 import { useLayoutEffect } from "react";
+import { Routes, Route } from "react-router-dom";
+import SpotifyDashboard from "./components/SpotifyDashboard.tsx";
 
 function App() {
   const { personal } = usePortfolioConfig();
@@ -15,12 +17,16 @@ function App() {
   }, [personal]);
 
   return (
-    <Layout>
-      <Hero />
-      <Projects />
-      <Skills />
-      {/* <Experience /> */}
-    </Layout>
+    <>
+      {/* <Layout>
+        <Hero />
+        <Projects />
+        <Skills />
+      </Layout> */}
+      <Routes>
+        <Route path="/spotify" element={<SpotifyDashboard />} />
+      </Routes>
+    </>
   );
 }
 
