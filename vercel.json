@@ -3,6 +3,10 @@
     {
       "source": "/github/:path*",
       "destination": "https://cactro-git-stats-production.up.railway.app/github/:path*"
+    },
+    {
+      "source": "/spotify/:path*",
+      "destination": "https://spotify-portfolio-production.up.railway.app/spotify/:path*"
     }
   ]
 }
