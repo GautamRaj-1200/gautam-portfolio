@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import {ReactNode} from "react";
+import { ReactNode } from "react";
 
 const buttonVariants = {
   rest: { scale: 1 },
@@ -17,22 +17,23 @@ const newTextVariants = {
   hover: { y: 0, opacity: 1 },
 };
 
-
-
-interface inputProps{
-  text:string,
-  icon: ReactNode,
-  link:string
+interface inputProps {
+  text: string;
+  icon: ReactNode;
+  link: string;
 }
 
-
-export default function AnimatedButton({text="Button", icon, link}: inputProps) {
+export default function AnimatedButton({
+  text = "Button",
+  icon,
+  link,
+}: inputProps) {
   return (
     <div className="mt-12">
       <motion.a
         href={link}
-        target={'_blank'}
-        className="group relative inline-flex items-center justify-center px-8 py-3 overflow-hidden font-semibold text-white hover:bg-white border hover:border-primary-900 hover:text-primary-900 bg-primary-900 transition-all duration-300"
+        target={"_blank"}
+        className="group relative inline-flex items-center justify-center px-8 py-3 overflow-hidden font-semibold text-white dark:text-primary-900 hover:bg-white dark:hover:bg-primary-800 border hover:border-primary-900 dark:hover:border-primary-700 hover:text-primary-900 dark:hover:text-primary-100 bg-primary-900 dark:bg-primary-100 transition-all duration-300"
         variants={buttonVariants}
         initial="rest"
         whileHover="hover"
@@ -44,7 +45,7 @@ export default function AnimatedButton({text="Button", icon, link}: inputProps) 
             variants={textVariants}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
-              {text}
+            {text}
             <motion.span
               className="ml-2"
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
@@ -57,12 +58,11 @@ export default function AnimatedButton({text="Button", icon, link}: inputProps) 
             variants={newTextVariants}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
-              {text}
+            {text}
             <motion.span
               className="ml-2"
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
             >
-
               {icon}
             </motion.span>
           </motion.span>

@@ -37,7 +37,7 @@ const Skills: React.FC = () => {
   return (
     <section
       id="skills"
-      className="min-h-screen flex items-center justify-center bg-gradient-to-b from-white to-primary-100 relative overflow-hidden py-20"
+      className="min-h-screen flex items-center justify-center bg-gradient-to-b from-white to-primary-100 dark:from-primary-800 dark:to-primary-900 relative overflow-hidden py-20"
     >
       <ParallaxBackground />
       <div className="relative z-10 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8">
@@ -48,10 +48,10 @@ const Skills: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-title font-semibold text-primary-800 mb-12 text-center">
+          <h2 className="text-4xl md:text-5xl font-title font-semibold text-primary-800 dark:text-primary-100 mb-12 text-center">
             Technical Skills
           </h2>
-          <p className="font-sans text-lg text-primary-600 tracking-medium leading-relaxed max-w-2xl mx-auto">
+          <p className="font-sans text-lg text-primary-600 dark:text-primary-300 tracking-medium leading-relaxed max-w-2xl mx-auto">
             A comprehensive list of technologies and tools I work with
           </p>
         </motion.div>
@@ -72,16 +72,16 @@ const Skills: React.FC = () => {
               className="group cursor-pointer"
             >
               <div
-                className="bg-white/50 backdrop-blur-sm border border-primary-300 rounded-full p-3 shadow-sm 
-                           hover:shadow-md hover:border-primary-400 transition-all duration-300 
-                           hover:bg-white/80"
+                className="bg-white/50 dark:bg-primary-700/50 backdrop-blur-sm border border-primary-300 dark:border-primary-600 rounded-full p-3 shadow-sm 
+                           hover:shadow-md hover:border-primary-400 dark:hover:border-primary-500 transition-all duration-300 
+                           hover:bg-white/80 dark:hover:bg-primary-700/80"
               >
                 <div className="flex justify-center items-center">
                   <div className="w-8 h-8">
                     <img src={skill.icon} alt="" className="w-full h-full" />
                   </div>
                   <h3
-                    className="text-base md:text-lg text-primary-800 group-hover:text-primary-900
+                    className="text-base md:text-lg text-primary-800 dark:text-primary-100 group-hover:text-primary-900 dark:group-hover:text-primary-50
                              transition-colors duration-300 px-2"
                   >
                     {skill.name}

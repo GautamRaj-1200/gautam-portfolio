@@ -42,7 +42,7 @@ const Hero = () => {
   return (
     <section
       id={"hero"}
-      className="min-h-screen flex items-center justify-center bg-gradient-to-b from-primary-100 to-white relative overflow-hidden px-4 sm:px-6 lg:px-8"
+      className="min-h-screen flex items-center justify-center bg-gradient-to-b from-primary-100 to-white dark:from-primary-800 dark:to-primary-900 relative overflow-hidden px-4 sm:px-6 lg:px-8"
     >
       <ParallaxBackground />
       <motion.div
@@ -53,19 +53,19 @@ const Hero = () => {
       >
         <motion.div className="text-center sm:text-left">
           <motion.h1
-            className="hero-title text-5xl sm:text-6xl md:text-7xl lg:text-7xl mb-4 font-bold text-primary-900"
+            className="hero-title text-5xl sm:text-6xl md:text-7xl lg:text-7xl mb-4 font-bold text-primary-900 dark:text-primary-100"
             variants={itemVariants}
           >
             {personal.name}
           </motion.h1>
           <motion.p
-            className="section-title text-xl sm:text-2xl text-primary-600 mb-6"
+            className="section-title text-xl sm:text-2xl text-primary-600 dark:text-primary-300 mb-6"
             variants={itemVariants}
           >
             {personal.role}
           </motion.p>
           <motion.p
-            className="body-text text-base sm:text-lg text-primary-700 mb-8 max-w-2xl mx-auto sm:mx-0"
+            className="body-text text-base sm:text-lg text-primary-700 dark:text-primary-200 mb-8 max-w-2xl mx-auto sm:mx-0"
             variants={itemVariants}
           >
             {personal.description}
@@ -98,35 +98,35 @@ const Hero = () => {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="relative z-10 bg-white p-4 rounded-full shadow-md flex items-center justify-center hover:shadow-lg transition-all duration-300"
+                  className="relative z-10 bg-white dark:bg-primary-700 p-4 rounded-full shadow-md flex items-center justify-center hover:shadow-lg transition-all duration-300"
                 >
                   {social.platform.toLowerCase() === "github" && (
                     <FaGithub
-                      className="text-primary-600 group-hover:text-primary-800 transition-all duration-300"
+                      className="text-primary-600 dark:text-primary-300 group-hover:text-primary-800 dark:group-hover:text-primary-100 transition-all duration-300"
                       size={28}
                     />
                   )}
                   {social.platform.toLowerCase() === "linkedin" && (
                     <FaLinkedin
-                      className="text-primary-600 group-hover:text-primary-800 transition-all duration-300"
+                      className="text-primary-600 dark:text-primary-300 group-hover:text-primary-800 dark:group-hover:text-primary-100 transition-all duration-300"
                       size={28}
                     />
                   )}
                   {social.platform.toLowerCase() === "twitter" && (
                     <FaXTwitter
-                      className="text-primary-600 group-hover:text-primary-800 transition-all duration-300"
+                      className="text-primary-600 dark:text-primary-300 group-hover:text-primary-800 dark:group-hover:text-primary-100 transition-all duration-300"
                       size={28}
                     />
                   )}
                   {social.platform.toLowerCase() === "dribbble" && (
                     <FaDribbble
-                      className="text-primary-600 group-hover:text-primary-800 transition-all duration-300"
+                      className="text-primary-600 dark:text-primary-300 group-hover:text-primary-800 dark:group-hover:text-primary-100 transition-all duration-300"
                       size={28}
                     />
                   )}
                   {social.platform.toLowerCase() === "behance" && (
                     <FaBehance
-                      className="text-primary-600 group-hover:text-primary-800 transition-all duration-300"
+                      className="text-primary-600 dark:text-primary-300 group-hover:text-primary-800 dark:group-hover:text-primary-100 transition-all duration-300"
                       size={28}
                     />
                   )}
@@ -140,14 +140,14 @@ const Hero = () => {
                     "behance",
                   ].includes(social.platform.toLowerCase()) && (
                     <FaGlobe
-                      className="text-primary-600 group-hover:text-primary-800 transition-all duration-300"
+                      className="text-primary-600 dark:text-primary-300 group-hover:text-primary-800 dark:group-hover:text-primary-100 transition-all duration-300"
                       size={28}
                     />
                   )}
                 </motion.a>
 
                 {/* Tooltip */}
-                <span className="absolute -bottom-10 text-sm font-medium bg-primary-900 text-white px-3 py-1 rounded-md opacity-0 group-hover:opacity-100 scale-90 group-hover:scale-100 transition-all duration-300 shadow-md">
+                <span className="absolute -bottom-10 text-sm font-medium bg-primary-900 text-white dark:bg-primary-700 dark:text-primary-100 px-3 py-1 rounded-md opacity-0 group-hover:opacity-100 scale-90 group-hover:scale-100 transition-all duration-300 shadow-md">
                   {social.platform.charAt(0).toUpperCase() +
                     social.platform.slice(1) || "Website"}
                 </span>
@@ -160,21 +160,21 @@ const Hero = () => {
           animate={{ y: [0, -10, 0] }}
         >
           <motion.div
-            className="relative mt-4 md:mt-12 bg-gradient-to-br from-white to-primary-100  p-6 rounded-lg shadow-lg border-2 border-primary-100 hover:border-primary-300  transition-all duration-300"
+            className="relative mt-4 md:mt-12 bg-gradient-to-br from-white to-primary-100 dark:from-primary-800 dark:to-primary-700 p-6 rounded-lg shadow-lg border-2 border-primary-100 dark:border-primary-600 hover:border-primary-300 dark:hover:border-primary-500 transition-all duration-300"
             variants={itemVariants}
           >
-            <h2 className="text-xl md:text-3xl font-bold font-title text-primary-900 mb-4">
+            <h2 className="text-xl md:text-3xl font-bold font-title text-primary-900 dark:text-primary-100 mb-4">
               {about.title}
             </h2>
             <motion.p
-              className="text-primary-600 font-medium text-base md:text-lg mb-6"
+              className="text-primary-600 dark:text-primary-300 font-medium text-base md:text-lg mb-6"
               variants={itemVariants}
             >
               <a
                 rel="noopener noreferrer"
                 target={"_blank"}
                 href={`mailto:${personal.email}`}
-                className="hover:text-primary-800 transition-all duration-300 flex items-center space-x-2"
+                className="hover:text-primary-800 dark:hover:text-primary-100 transition-all duration-300 flex items-center space-x-2"
               >
                 <FaEnvelope size={20} className="transition-all duration-300" />
                 <span>{personal.email}</span>
@@ -183,14 +183,14 @@ const Hero = () => {
 
             {/* Location Section */}
             <motion.p
-              className="text-primary-600 font-medium text-base md:text-lg mb-6 flex items-center space-x-2"
+              className="text-primary-600 dark:text-primary-300 font-medium text-base md:text-lg mb-6 flex items-center space-x-2"
               variants={itemVariants}
             >
               <FaMapPin size={20} className="transition-all duration-300" />
               <span>{personal.location}</span>
             </motion.p>
 
-            <p className="text-primary-700 text-base leading-relaxed">
+            <p className="text-primary-700 dark:text-primary-200 text-base leading-relaxed">
               {about.description}
             </p>
           </motion.div>

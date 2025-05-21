@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import { Sidebar } from "./Sidebar.tsx";
-import {Footer} from "./Footer.tsx";
+import { Footer } from "./Footer.tsx";
 
 interface LayoutProps {
   children: ReactNode;
@@ -8,7 +8,7 @@ interface LayoutProps {
 
 export const Layout = ({ children }: LayoutProps) => {
   return (
-    <div className="min-h-screen bg-primary-50 ">
+    <div className="min-h-screen bg-primary-50 dark:bg-primary-900">
       <Sidebar />
       <main className="flex-1">
         <div className="">{children}</div>
